@@ -34,6 +34,35 @@ using the following backbone network architectures:
 
 Additional backbone architectures may be easily implemented. For more details about these models, please see [References](#references) below.
 
+##Detectron contribution
+
+We aim to make it as simple and straightforward as possible for you to contribute to our project.
+
+##Using Pre - trained models Models for Inference
+
+##Image Location
+
+The infer simple.py utility may be used to execute inference on a directory of picture files (demo/*.jpg in this example). In this example, a ResNet-101-FPN foundation from the models zoo is used with a final generated Mask R-CNN model. The models should be downloaded by Detectron immediately from the URL supplied by the —wts parameter. The directory supplied by —output-dir will include PDF visualisations of the observations produced by this programme. Here is an illustration of the results you might anticipate seeing (for details on the copyright of the photos used in the demonstration, check demo/NOTICE).
+
+Mask R-CNN may be sluggish when performing inferences using your own high-quality photos since a lot of effort is required upsampling the projected filters to the actual picture quality . If the misc mask duration given by tools/infer simple.py is excessive, you can identify this problem . The fix is to first enlarge your photos so that the shorter side is somewhere between 600 and 800 pixels, and then perform inference on the smaller image.
+
+##Our Development Methodology
+
+Releases of tinier updates and enhancements will continue. Larger updates (such as changesets integrating a new article) will be made more often.
+
+##Requests for Pull
+
+We encourage you to submit pull requests.
+
+-	Build your branches from main after forking the repository.
+-	Add testing if you've introduced code that needs to be evaluated.
+-	Revise the description if your APIs have changed.
+-	The test script must succeed.
+-	Check that your code is clean.
+-	Make sure the speed and precision of the baseline method don't decline.
+-	Fill out the Contributor License Agreement if you haven't yet ("CLA").
+
+
 ## Update
 
 - 4/2018: Support Group Normalization - see [`GN/README.md`](./projects/GN/README.md)
@@ -41,6 +70,15 @@ Additional backbone architectures may be easily implemented. For more details ab
 ## License
 
 Detectron is released under the [Apache 2.0 license](https://github.com/facebookresearch/detectron/blob/master/LICENSE). See the [NOTICE](https://github.com/facebookresearch/detectron/blob/master/NOTICE) file for additional details.
+
+Agreement for Contributor License ("CLA")
+We require a CLA before we can approve your pull request. To collaborate with any of Facebook's open source programs, you just need to complete this procedure once.
+
+##Issues
+
+GitHub problems are primarily meant to serve as a community platform for jointly troubleshooting problems, perhaps resulting to pull requests with remedies when necessary. They will be mostly unmanaged.
+License
+By making a submission to Detectron, you consent to the terms of the LICENSE file located in the base directory of the source folder.
 
 ## Citing Detectron
 
